@@ -177,3 +177,28 @@ if __name__ == "__main__":
     button.pack(side = RIGHT) 
 
     root.mainloop()
+    
+"""  example how to use openslide  
+import openslide
+from PIL import Image
+import numpy as np
+
+filepath = '/Users/kunlin/Documents/CuraCloud/'
+
+kw = '11446'
+f = openslide.OpenSlide( filepath+kw+'.svs' )
+
+print 'associated_images.keys: ',f.associated_images.keys()
+thumb = f.associated_images['thumbnail']
+thumb.save( filepath+kw+'thumbnail.png' )
+
+
+level_ct = f.level_count
+print 'level_count = ',level_ct
+print 'level_dimensions: ',f.level_dimensions
+
+for i in np.arange(level_ct-1, level_ct):
+    dim = f.level_dimensions[i]
+    pic = f.read_region( (0,0), i, dim )
+    pic.save( filepath+kw+'_level'+str(i)+'.png' )
+"""
