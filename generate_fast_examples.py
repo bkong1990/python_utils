@@ -62,7 +62,7 @@ def generate_crops(file_names,split,filename,CROP_SIZE,IMG_SIZE,pos_neighbor,neg
           end_col = IMG_WIDTH+CROP_SIZE-1
           #print end_col,col_cnt*IMG_SIZE
         img_crop[:end_row-row_cnt*IMG_SIZE,:end_col-col_cnt*IMG_SIZE,:] = padded_img[start_row:end_row,start_col:end_col,:]
-        crop_name = crop_img_dir + os.path.basename(img_file_name)[:-3] + '_R%d_C%d.tif' %(row_cnt,col_cnt)
+        crop_name = crop_img_dir + os.path.basename(img_file_name)[:-4] + '_R%d_C%d.tif' %(row_cnt,col_cnt)
         with warnings.catch_warnings():
           warnings.simplefilter("ignore")
           skimage.io.imsave(crop_name, img_crop)
@@ -77,7 +77,7 @@ def generate_crops(file_names,split,filename,CROP_SIZE,IMG_SIZE,pos_neighbor,neg
           if gt_offset_x>=-neg_neighbor and gt_offset_x < IMG_SIZE+neg_neighbor and gt_offset_y>=-neg_neighbor and gt_offset_y<IMG_SIZE+neg_neighbor:
             gts_mask.append([gt_offset_y,gt_offset_x])
         
-        mask_name = crop_mask_dir + os.path.basename(img_file_name)[:-3] + '_R%d_C%d.tif' %(row_cnt,col_cnt)
+        mask_name = crop_mask_dir + os.path.basename(img_file_name)[:-4] + '_R%d_C%d.tif' %(row_cnt,col_cnt)
         for j in range(len(gts_mask)):
           for cnt_x in range(-neg_neighbor,neg_neighbor+1):
             for cnt_y in range(-neg_neighbor,neg_neighbor+1):
