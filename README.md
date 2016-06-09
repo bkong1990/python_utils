@@ -9,3 +9,5 @@ How to install?
 How to use this util?
 - In this util, two windows are initialized. The main window is an overview of the .svs file and the second window is a local view of the image.
 - To use this file, change IMG_DIR, SAVE_DIR, Type and selection_size. Also, modify img_ind to change the starting id of your image files. 
+
+# svs_cropping.py
