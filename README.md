@@ -15,13 +15,13 @@ generate_fast_examples.py is a util to generate training & validation examples f
 
 How to use this util?
 change the following variables:
-TRAIN_DIR
-TEST_DIR
-SAVE_DIR
-train_split
-test_split
-CROP_SIZE
-IMG_SIZE
-pos_neighbor
-neg_neighbor
+-TRAIN_DIR
+-TEST_DIR
+-SAVE_DIR
+-train_split
+-test_split
+-CROP_SIZE
+-IMG_SIZE
+-pos_neighbor
+-neg_neighbor
 
