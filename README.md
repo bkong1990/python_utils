@@ -10,4 +10,18 @@ How to use this util?
 - In this util, two windows are initialized. The main window is an overview of the .svs file and the second window is a local view of the image.
 - To use this file, change IMG_DIR, SAVE_DIR, Type and selection_size. Also, modify img_ind to change the starting id of your image files. 
 
-# svs_cropping.py
+# generate_fast_examples.py
+generate_fast_examples.py is a util to generate training & validation examples for efficient patch convolutional neural networks
+
+How to use this util?
+change the following variables:
+TRAIN_DIR
+TEST_DIR
+SAVE_DIR
+train_split
+test_split
+CROP_SIZE
+IMG_SIZE
+pos_neighbor
+neg_neighbor
+
