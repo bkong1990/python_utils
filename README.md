@@ -25,3 +25,11 @@ change the following variables:
 - pos_neighbor
 - neg_neighbor
 
+# purge_fast_examples.py
+This util is for efficient cnn. After generating the training examples, some of the images don't contain any desired label (all pixels are 255), which is purged out by this util.
+
+How to use?
+change the following directory:
+- TRAIN_DIR 
+- TEST_DIR 
+- SAVE_DIR
