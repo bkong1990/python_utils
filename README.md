@@ -33,3 +33,6 @@ change the following directory:
 - TRAIN_DIR 
 - TEST_DIR 
 - SAVE_DIR
+
+# weighted_selection.py
+Sometimes, we need to selected items from a list associated with weights
